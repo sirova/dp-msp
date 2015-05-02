@@ -1,0 +1,373 @@
+<!-- Manually saved generated template for template debug in browser-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="robots" content="none">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="app" data-spy="scroll" data-offset="81" data-target="#fixed-navbar">
+
+<!-- Fixed navbar -->
+<nav id="fixed-navbar" class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container">
+        <!-- Collapsible navbar header -->
+        <div class="navbar-header">
+            <button id="navbar-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Startups in SVK</a>
+        </div>
+
+        <!-- Navbar menu -->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#introduction" animated-scroll>Introduction</a></li>
+                <li><a href="#overview" animated-scroll>KPMG Survey</a></li>
+                <li><a href="#survey" animated-scroll>Our Survey</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container" ng-controller="Controller">
+
+    <!-- Introduction -->
+    <section>
+        <a class="anchor" id="introduction"></a>
+        <h2>Introduction</h2>
+        <p>This website is a practical part of master's thesis Management of software projects. Part of management software projects is management of startups.
+ Recently,you can hear more and more often the word startup, especially in Slovakia. Young generation is using this term very frequently. They often claim that starting own business is now "in".  This was one of the major reasons to analyse this phenomenon. This website presents information about Slovakia startups according survey.
+<p>The website consists of 3 parts. First part is dedicated to startup definition. The second part presents the selected results of the KPMG startup survey. The last part presents selected results of our survey. </p>
+
+        <h3>What is startup</h3>
+        <p>The term startup began popular in Slovakia and neighbouring countries 
+in recent years. The popularity of the term began to grow abroad with massive
+spread of the Internet, which offers space for business for companies focusing on
+information and innovative technologies. Startup understand the new company or companies in the beginning, which is trying to reach the range by developing new technologies, products or services. </p>
+        <p>The map shows overview of slovak startups and even the site of company headquarters.</p>
+		<a href="http://www.startitup.sk/catalog/startups/" target="_blank">
+            <img src="img/map.png" class="img-responsive"/>
+            <div class="caption">List of Slovak startups</div>
+        </a>
+    </section>
+
+
+    <!-- Overview -->
+    <section>
+        <a class="anchor" id="overview"></a>
+        <h2>KPMG Survey overview</h2>
+        <p>KPMG is international consultancy and audit company. Created and published survey about Slovakia startups in 2014 and focused on Innovation Driven Entities (IDE). IDE are companies that uses innovative technology and has a special business models. Each respondet was attribute to one of these categorie: Startup 37%, Corporates 38%, Public sector entities 13%, Organizations supporting startup 7% and Investors 5%.</p>
+		<p>For the presentation we selected some interesting results.</p>
+        <a href="http://www.kpmg.com/sk/sk/issuesandinsights/articlespublications/stranky/startup-survey-2014.aspx" target="_blank">Startup survey 2014</a>
+
+        <figure>
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/kpmg3.png">
+                    <div class="caption">Age</div>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/kpmg8.png">
+                    <div class="caption">Business area</div>
+                </div>
+            </div>
+        </figure>
+
+        <figure>
+            <img class="img-responsive" src="img/kpmg5.png">
+            <div class="caption">Field of education</div>
+        </figure>
+
+        <figure>
+            <img class="img-responsive" src="img/kpmg4.png">
+            <div class="caption">Education</div>
+        </figure>
+
+        <figure>
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/kpmg9.png">
+                    <div class="caption">Stage of development</div>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/kpmg10.png">
+                    <div class="caption">Absence of revenue</div>
+                </div>
+            </div>
+        </figure>
+
+    </section>
+
+    <!-- Survey -->
+    <section>
+        <a class="anchor" id="survey"></a>
+        <h2>Survey about management of software projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Survey was created ​​by Google Docs, where are collected data from respondents.
+Information about the company was anonymous. Survey is divided into 4 parts: Background of the organisation, background of the project management software, background of the project  manager and last part is dedicated to personal opinion.</p>
+            </div>
+            <div class="col-md-6">
+                <figure>
+                    <figcaption>Q: Is your company startup?</figcaption>
+                    <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.startup.labels" data-data="vm.charts.startup.data" data-legend="true"></canvas>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results">
+            <h3>Results</h3>
+            <p>For the website presentation we have choosed some interesting results of our survey. We divided respondents into two groups startups and long-acting organizations.The questionnaire was sent to 70 people but answered only 48 of them. 46% of respondents were from startup companies and organizations and 56% were from non-startup organization.</p>
+            <p>In the left part are the results about startups and in the right site are results about long-acting organizations.</p>
+			<div>
+                <h4>Background of the company</h4>
+
+                <!-- Business area -->
+                <figure>
+                    <figcaption>Q: What is the core business area of your company?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.businessArea.startup.labels" data-data="vm.charts.businessArea.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.businessArea.noStartup.labels" data-data="vm.charts.businessArea.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- International -->
+                <figure>
+                    <figcaption>Q: Is your company international?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.international.startup.labels" data-data="vm.charts.international.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.international.noStartup.labels" data-data="vm.charts.international.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- ISO -->
+                <figure>
+                    <figcaption>Q: Is your company holder one of the following ISO standards?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.iso.startup.labels" data-data="vm.charts.iso.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.iso.noStartup.labels" data-data="vm.charts.iso.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+
+            <div>
+                <h4>Background of the project management software</h4>
+
+                <!-- Software management tools use? -->
+                <figure>
+                    <figcaption>Q: Do you use software management tools in your company?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.softwareManagementTools.startup.labels" data-data="vm.charts.softwareManagementTools.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.softwareManagementTools.noStartup.labels" data-data="vm.charts.softwareManagementTools.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Software management tool -->
+                <figure>
+                    <figcaption>Q: Which kind of main software project management tool do you use?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.tool.startup.labels" data-data="vm.charts.tool.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.tool.noStartup.labels" data-data="vm.charts.tool.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- License -->
+                <figure>
+                    <figcaption>Q: Is your main SPM tool licensed or for free?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.license.startup.labels" data-data="vm.charts.license.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.license.noStartup.labels" data-data="vm.charts.license.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+
+            <div>
+                <h4>Methods of project management</h4>
+
+                <!-- Processes -->
+                <figure>
+                    <figcaption>Q: Does your organization use organizational processes, methods and tools of project management?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.processes.startup.labels" data-data="vm.charts.processes.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.processes.noStartup.labels" data-data="vm.charts.processes.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Manager -->
+                <figure>
+                    <figcaption>Q: Does your organization recognize project manager function/position?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.projectManager.startup.labels" data-data="vm.charts.projectManager.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.projectManager.noStartup.labels" data-data="vm.charts.projectManager.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Results analysis -->
+                <figure>
+                    <figcaption>Q: Are the results from the SMP systematically analyzed in order to improve project management?</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.resultsAnalysis.startup.labels" data-data="vm.charts.resultsAnalysis.startup.data" data-legend="true"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-doughnut center-block" data-labels="vm.charts.resultsAnalysis.noStartup.labels" data-data="vm.charts.resultsAnalysis.noStartup.data" data-legend="true"></canvas>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+
+            <div>
+                <h4>Feedback on the software management projects</h4>
+				<p>Vertical values show the number of respondents and horizontal values show evaluation of respondents.</p>
+                <p>The scale consists of 5 steps:</p>
+                <ul>
+                    <li>1: worst</li>
+                    <li>5: best</li>
+                </ul>
+
+                <!-- Importance -->
+                <figure>
+                    <figcaption>Q: Importance to use SM tools for project management</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.importanceOfSm.startup.labels" data-data="vm.charts.importanceOfSm.startup.data"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.importanceOfSm.noStartup.labels" data-data="vm.charts.importanceOfSm.noStartup.data"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Satisfaction -->
+                <figure>
+                    <figcaption>Q: Your overall satisfaction with SMP</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.satisfaction.startup.labels" data-data="vm.charts.satisfaction.startup.data"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.satisfaction.noStartup.labels" data-data="vm.charts.satisfaction.noStartup.data"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Difficulty -->
+                <figure>
+                    <figcaption>Q: Difficulty to use your main SM tool</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.difficulty.startup.labels" data-data="vm.charts.difficulty.startup.data"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.difficulty.noStartup.labels" data-data="vm.charts.difficulty.noStartup.data"></canvas>
+                        </div>
+                    </div>
+                </figure>
+
+                <!-- Quality -->
+                <figure>
+                    <figcaption>Q: Project management quality</figcaption>
+                    <div class="row">
+                        <div class="col-md-6">
+						<h5 class="text-center">Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.pmQuality.startup.labels" data-data="vm.charts.pmQuality.startup.data"></canvas>
+                        </div>
+                        <div class="col-md-6">
+						<h5 class="text-center">Non Startups</h5>
+                            <canvas class="chart chart-bar center-block" data-labels="vm.charts.pmQuality.noStartup.labels" data-data="vm.charts.pmQuality.noStartup.data"></canvas>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- JS Dependencies -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/Chart.js/Chart.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+
+<!-- JS Sources -->
+<script src="src/data.js"></script>
+<script src="src/app.js"></script>
+<script src="src/Controller.js"></script>
+<script src="src/AnimatedScrollDirective.js"></script>
+
+</body>
+</html> 
